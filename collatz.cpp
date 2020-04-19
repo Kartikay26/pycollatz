@@ -2,7 +2,7 @@ int collatz(int n)
 {
     int c = 0;
     long long int x = n;
-    while (x != 1)
+    while (x > 1)
     {
         if (x % 2 == 0)
         {

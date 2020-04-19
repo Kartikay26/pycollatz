@@ -5,8 +5,10 @@ using namespace std;
 
 int main()
 {
-    for (int i = 1; i <= 10000000; i++)
+    int ans = 0;
+    for (int i = 0; i < 1000000; i++)
     {
-        cout << i << ", " << collatz(i) << endl;
+        ans += collatz(i);
     }
+    cout << ans << endl;
 }

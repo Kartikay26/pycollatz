@@ -14,3 +14,9 @@ add_library(collatz collatz.cpp)
 add_executable(collatzer main.cpp)
 
 target_link_libraries(collatzer PUBLIC collatz)
+
+# python bindings using pybind
+set(SYSTEM ON)
+add_subdirectory(pybind11)
+pybind11_add_module(pycollatz pycollatz.cpp)
+target_link_libraries(pycollatz PUBLIC collatz)
